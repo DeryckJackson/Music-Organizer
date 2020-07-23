@@ -51,5 +51,17 @@ namespace MusicOrganizer.Controllers
       model.Add("artist", foundArtist);
       return View("Show", model);
     }
+
+    [HttpGet("/artists/search_by_artist")]
+    public ActionResult SearchByArtist(string artistName)
+    {
+      int id = Artist.Search(artistName).Id;
+      Dictionary<string, object> model = new Dictionary<string, object>();
+      Artist selectedArtist = Artist.Find(id);
+      List<Record> artistRecords = selectedArtist.Records;
+      model.Add("artist", selectedArtist);
+      model.Add("records", artistRecords);
+      return View(model);
+    }
   }
 }
