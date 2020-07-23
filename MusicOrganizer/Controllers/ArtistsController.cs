@@ -33,12 +33,12 @@ namespace MusicOrganizer.Controllers
       Dictionary<string, object> model = new Dictionary<string, object>();
       Artist selectedArtist = Artist.Find(id);
       List<Record> artistRecords = selectedArtist.Records;
-      model.Add("artist", selectedCategory);
-      model.Add("records", categoryItems);
+      model.Add("artist", selectedArtist);
+      model.Add("records", artistRecords);
       return View(model);
     }
 
-    // This one creates new Items within a given Category, not new Categories:
+    // This one creates new Records within a given artist, not new record:
     [HttpPost("/artists/{artistId}/records")]
     public ActionResult Create(int artistId, string recordTitle)
     {

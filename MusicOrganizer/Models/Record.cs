@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 
-namespace MusicOrganizer
+namespace MusicOrganizer.Models
 {
   public class Record
   {
     public string Title { get; set; }
     public int Id { get; }
-    private List<Record> _instances = new List<Record>();
+    private static List<Record> _instances = new List<Record>();
 
     public Record(string title)
     {
@@ -17,7 +17,7 @@ namespace MusicOrganizer
 
     public static void ClearAll()
     {
-      _instances.Clear():
+      _instances.Clear();
     }
 
     public static List<Record> GetAll()

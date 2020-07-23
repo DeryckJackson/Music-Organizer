@@ -1,0 +1,17 @@
+@{
+  Layout = "_Layout";
+}
+
+@using MusicOrganizer.Models;
+
+<h3>Here is the Artist:</h3>
+
+<ol>
+@foreach (Record record in @Model["record"])
+{
+  <li><a href='/artists/@Model["records"].Id/records/@record.Id'>@record.Title</a></li>
+}
+</ol>
+
+<p><a href='/artists/@Model["artist"].Id/records/new'>Add a new artist</a></p>
+<p><a href='/'>Return to Main Page</a></p>

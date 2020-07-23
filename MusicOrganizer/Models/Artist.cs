@@ -14,7 +14,7 @@ namespace MusicOrganizer.Models
       Name = artistName;
       _instances.Add(this);
       Id = _instances.Count - 1;
-      Records = new List<Artist> { };
+      Records = new List<Record> { };
     }
 
     public static void ClearAll()
