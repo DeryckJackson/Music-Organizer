@@ -34,7 +34,7 @@ namespace MusicOrganizer.Models
 
     public static Artist Search(string artistName)
     {
-      return _instances.Find(x => x.Name.Contains(artistName));
+        return _instances.Find(x => x.Name.Contains(artistName));
     }
 
     public void AddRecord(Record record)

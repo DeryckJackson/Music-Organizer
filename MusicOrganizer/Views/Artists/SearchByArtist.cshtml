@@ -2,7 +2,14 @@
   Layout = "_Layout";
 }
 
-@using MusicOrganizer.Models;
+<h1>Search for an Artist Records</h1>
+<p>Add an Artist here:</p>
 
-<h3>Search your favorite Artists</h3>
+<form action="/artists/search_results" method="post">
+  <label for="artistName">Artist name</label>
+  <input id="artistName" name="artistName" type="text">
+  <button type="submit">Search</button>
+</form>
 
+<p><a href="/">Back home</a></p>
+<p><a href="/artists">Back to artists.</a></p>
