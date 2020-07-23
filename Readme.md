@@ -26,8 +26,9 @@ __
 
 | Behavior    | Input | Output |
 | :---------- | ----- | -----: |
-| User will be able to create a new record with a title | New Record, " |  |
-|  |  |  |
+| User will be able to create a new record with a title | New Record, "Nevermind" | Record: "Nevermind" |
+| User will be able to add an artist name to records | New record, "Nirvana" | Record: "Nevermind, Artist: "Nirvana" |
+| User will be able to list out all records by artist | Artist: "Nirvana" | Records: "Nevermind", "In Utero" |
 
 
 ## Known Bugs
